@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(204, 43%, 93%);
+    font-family: 'Karla', sans-serif;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 100px;
+}
+
+
+
+
+
+/* Parent Container ==================================== */
+.parent {
+    background-color: hsl(204, 43%, 93%);
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 2fr 2fr 2fr;
+    min-width: 375px;
+    min-height: 100%;
+    border-radius: 0.3em;
+    overflow: hidden;
+}
+
+
+
+
+
+/* First Block ==================================== */
+header {
+    background-color: #fff;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.4em;
+
+}
+
+/* (1st line) ....................... */
+header > .line1 {
+    color: hsl(179, 62%, 43%);
+}
+
+/* (2nd line) ....................... */
+header > .line2 {
+    color: hsl(71, 73%, 54%);
+}
+
+/* (3rd line) ....................... */
+header > .line3 {
+    color: hsl(218, 22%, 67%);
+    line-height: 1.75em;
+}
+
+
+
+
+
+/* Second Block ==================================== */
+main {
+    background-color: hsl(179, 62%, 43%);
+    padding: 2rem;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.4em;
+}
+
+/* (2nd line) ....................... */
+main > .line2 > .price:nth-of-type(1) {
+    font-size: 27px;
+    margin-right: 9px;
+    font-weight: 700;
+}
+main > .line2 > .price:nth-of-type(2) {
+    vertical-align: super;
+    font-weight: bold;
+    color: hsla(203, 44%, 93%, 0.605);
+}
+
+/* (3rd line) ....................... */
+main > .line3 {
+    margin-bottom: 20px;
+    color: hsl(204, 43%, 93%);
+}
+
+/* (Button) ....................... */
+main > button {
+    color: #fff;
+    font-weight: bolder;
+    font-size: 0.96em;
+    background-color: hsl(71, 73%, 54%);
+    border-style: none;
+    width: 100%;
+    height: 4em;
+    border-radius: 0.48em;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Third Block ==================================== */
+footer {
+    background-color: hsl(179, 62%, 62%);
+    padding: 2rem;
+}
+
+/* (1st line) ....................... */
+footer > .line1 {
+    margin-bottom: 20px;
+}
+
+/* (2nd line) ....................... */
+footer > .line2 {
+    color: hsl(204, 43%, 93%);
+    line-height: 1.4em;
+}
+
+
+
+
+@media screen and (min-width:900px) {
+    .parent {
+        box-shadow: rgba(0, 0, 0, 0.065) 0px 0px 70px;
+        max-width: 600px;
+
+        grid-template-columns: auto auto;
+        grid-template-rows: min-content min-content;
+    }
+
+    header {
+        grid-column: 1/3;
+    }
+}

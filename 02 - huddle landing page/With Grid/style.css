@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body ====================================*/
+body {
+    display: grid;
+
+    grid-template-areas: 
+    "hd hd hd hd hd hd"
+    "as as as as mn mn"
+    "as as as as ft ft";
+
+    min-width: 100vw;
+    min-height: 100vh;
+
+    background-color: hsl(257, 40%, 49%);
+    background-image: url("images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Detail ====================================*/
+header {
+    grid-area: hd;
+}
+aside {
+    grid-area: as;
+}
+main {
+    grid-area: mn;
+    color: #fff;
+    padding: 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer {
+    grid-area: ft;
+
+    display: flex;   
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/* Text ====================================*/
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+}
+.para {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+
+    margin-top: 25px;
+    margin-bottom: 25px;
+    line-height: 1.6em;
+}
+.register {
+    border-style: none;
+    width: 170px;
+    padding: 17px;
+    color: hsl(257, 40%, 49%);
+    border-radius: 5em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.95em;
+    font-weight: bold;
+    transition: 0.7s;
+
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 6px 6px 8px;
+}
+.register:active {
+    background-color: hsl(300, 69%, 71%);
+    color: #fff;
+}
+
+
+/* Logo ====================================*/
+.hurdle-logo {
+    margin: 45px;
+    width: 14rem;
+}
+.mockup-logo {
+    width: 100%;
+    padding: 45px;
+}
+.social-button {
+    max-height: 2.5em;
+    margin: 14px;
+    margin-bottom: 20px;
+}
+.social-link:last-child {
+    margin-right: 20px;
+}
+
+
+
+/* Mobile ====================================*/
+@media screen and (width:450px) {
+    body {
+        grid-template-areas: 
+        "hd hd hd hd"
+        "as as as as"
+        "mn mn mn mn"
+        "ft ft ft ft";
+
+        background-image: url("images/bg-mobile.svg");
+        background-size: contain;
+    }
+
+    .media {
+        text-align: center;
+    }
+
+    .register {
+        margin: 0 auto;
+        width: 230px;
+    }
+
+}
